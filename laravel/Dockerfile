@@ -11,6 +11,7 @@ ENV PHP_UPLOAD_MAX_FILESIZE: 512M
 ENV PHP_POST_MAX_SIZE: 512M
 
 RUN docker-php-ext-install pdo
+RUN docker-php-ext-install pdo_mysql
 
 RUN apk add --no-cache libpng libpng-dev && docker-php-ext-install gd && apk del libpng-dev
 

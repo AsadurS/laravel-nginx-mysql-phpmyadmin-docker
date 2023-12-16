@@ -9,7 +9,7 @@ services:
         #restart: unless-stopped
         working_dir: /var/www
         volumes:
-            - ./laravel/:/var/www:cached
+            - ./laravel/:/var/www
             - ./laravel/php/local.ini:/usr/local/etc/php/conf.d/local.ini
             #- ./laravel/supervisord.conf:/etc/supervisord.conf
             #- ~/.ssh:/root/.ssh
@@ -26,7 +26,7 @@ services:
             - 80:80
            # - 443:443
         volumes:
-            - ./laravel/:/var/www:delegated
+            - ./laravel/:/var/www
             - ./laravel/nginx/default.conf:/etc/nginx/conf.d/default.conf
             #- ./laravel/ssl:/etc/nginx/conf.d/ssl
         networks:
